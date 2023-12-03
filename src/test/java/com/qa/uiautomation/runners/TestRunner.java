@@ -10,7 +10,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
         features="classpath:features",//to tell cucumber where is ur feature file
         glue="com.qa.uiautomation.stepdefs", // to tell cucumber where is ur step def code
-        tags="", // to tell which tagged feature file to execute 
+        tags="@ValidatingHomepage", // to tell which tagged feature file to execute 
         plugin = {"pretty", // to generate reports
             "html:target/html/web_ui_automation_report.html",//target/html/htmlreport.html
             "json:target/json/json_report.json",

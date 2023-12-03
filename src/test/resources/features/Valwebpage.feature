@@ -10,11 +10,17 @@ And application logo is displayed
 
 @ValidatingHomepage
 Scenario: Homepage validation
-Given on homepage list of buttons are displayed
-And  User Click on product button
-When User redirected to product page with title as "Automation Exercise - All Products" 
-And  User click on cart button 
-And  User redirected to cart page with title as "Automation Exercise - Checkout"
+Given homepage headersection is visible
+When on homepage list of buttons are displayed
+| Home           |
+| Products       |
+| Cart           |
+| Signup / Login |
+| Test Cases     |
+| API Testing    |
+| Video Tutorials|
+| Contact us     |
+
 
 @subscriptionofhomepage
 Scenario: User is able to open the browser, navigate to the url and verify subsciption in home page

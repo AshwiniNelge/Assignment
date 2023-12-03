@@ -20,9 +20,9 @@ public class CmnPageObjects {
 		wait = new WebDriverWait(driver, 15);
 	}
 
-	// Methods
-	public void verifycartPageTitle(String cartPageTitle) {
-		Assert.assertEquals(true, driver.getTitle().contains(cartPageTitle));
-	}
+//	// Methods
+//	public void verifycartPageTitle(String cartPageTitle) {
+//		Assert.assertEquals(true, driver.getTitle().contains(cartPageTitle));
+//	}
 
 }

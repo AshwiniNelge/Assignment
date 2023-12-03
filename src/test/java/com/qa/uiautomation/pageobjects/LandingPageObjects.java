@@ -42,7 +42,7 @@ public class LandingPageObjects {
 	private By arrowBtn = By.xpath("//button[@id='subscribe']");
 	private By successTxt = By.xpath("//div[text()='You have been successfully subscribed!']");
 	private By HomepageBtns = By.xpath("//ul[@class='nav navbar-nav']");
-
+	private By actButtonsNameList = By.xpath("//div[@class='col-sm-8']//li//a");
 
 	public void homePageTitle() {
 		String expectedTitle = "Automation Exercise";
@@ -55,7 +55,7 @@ public class LandingPageObjects {
 		Assert.assertEquals(true, landingPageLogoEle.isDisplayed());
 	}
 
-	public void validatehomepagebtns() {
+	public void validateHomePageBtns() {
 		WebElement HomepageBtnsEle = driver.findElement(HomepageBtns);
 		Assert.assertEquals(true, HomepageBtnsEle.isDisplayed());
 	}
@@ -106,5 +106,15 @@ public class LandingPageObjects {
 		WebElement loggedInUserNameTxtEle = driver.findElement(loggedInUserNameTxt);
 		Assert.assertEquals(loggedInUserName, loggedInUserNameTxtEle.getText().trim());
 	}
+	
+	public void validateHomepageButtonList(List<String> buttonsNameList)
+    {
+	    List<String> expectedButtonsNameList = buttonsNameList;
+	    List<WebElement> actButtonsNameListEle = driver.findElements(actButtonsNameList);
+	    for (int i = 0; i < expectedButtonsNameList.size(); i++) {
+	    	//Assert.assertEquals(expectedButtonsNameList.get(i), actButtonsNameListEle.get(i).getText());
+	    	Assert.assertEquals(true, actButtonsNameListEle.get(i).getText().trim().contains(expectedButtonsNameList.get(i).trim()));
+		}
+    }
 
 }

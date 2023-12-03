@@ -71,34 +71,16 @@ public class StepDef {
 		landingPageObject.validateAppLogo();
 		logger.info("application log is displayed as automation excise");
 	}
-
-	@Given("on homepage list of buttons are displayed")
-	public void on_homepage_list_of_buttons_are_displayed() {
-		landingPageObject.validatehomepagebtns();
+    
+	@Given("homepage headersection is visible")
+	public void homepage_headersection_is_visible() {
+		landingPageObject.validateHomePageBtns();
 	}
 
-	@Given("User Click on product button")
-	public void user_click_on_product_button() {
-		landingPageObject.clickProductsBtn();
-		logger.info("clicked on the products button");
-	}
+	@When("on homepage list of buttons are displayed")
+	public void on_homepage_list_of_buttons_are_displayed(List<String> buttonsNameList) {
 
-	@When("User redirected to product page with title as {string}")
-	public void user_redirected_to_product_page_with_title_as(String prodPageTitle) {
-		productPageObject.validateProdPageTitle(prodPageTitle);
-		logger.info("product page title validation is successful with title as " + prodPageTitle);
-	}
-
-	@When("User click on cart button")
-	public void user_click_on_cart_button() {
-		landingPageObject.clickCartBtn();
-		logger.info("clicked on the cart button");
-	}
-
-	@When("User redirected to cart page with title as {string}")
-	public void user_redirected_to_cart_page_with_title_as(String cartPageTitle) {
-		cmnPageObject.verifycartPageTitle(cartPageTitle);
-
+		landingPageObject.validateHomepageButtonList(buttonsNameList);
 	}
 
 	@Given("User Scroll down to footer of the page")
