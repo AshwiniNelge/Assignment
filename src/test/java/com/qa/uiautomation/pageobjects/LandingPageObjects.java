@@ -113,7 +113,7 @@ public class LandingPageObjects {
 	    List<WebElement> actButtonsNameListEle = driver.findElements(actButtonsNameList);
 	    for (int i = 0; i < expectedButtonsNameList.size(); i++) {
 	    	//Assert.assertEquals(expectedButtonsNameList.get(i), actButtonsNameListEle.get(i).getText());
-	    	Assert.assertEquals(true, actButtonsNameListEle.get(i).getText().trim().contains(expectedButtonsNameList.get(i).trim()));
+	    	Assert.assertEquals(true, actButtonsNameListEle.get(i).getText().contains(expectedButtonsNameList.get(i)));
 		}
     }
 

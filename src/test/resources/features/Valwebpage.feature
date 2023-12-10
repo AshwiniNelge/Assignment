@@ -10,8 +10,9 @@ And application logo is displayed
 
 @ValidatingHomepage
 Scenario: Homepage validation
-Given homepage headersection is visible
-When on homepage list of buttons are displayed
+Given user navigate to the home application url "http://automationexercise.com"
+When homepage headersection is visible
+Then on homepage list of buttons are displayed
 | Home           |
 | Products       |
 | Cart           |

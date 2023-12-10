@@ -1,6 +1,5 @@
 package com.qa.uiautomation.core;
-import java.util.Iterator;
-import java.util.Set;
+
 import java.util.concurrent.TimeUnit;
 
 import org.apache.logging.log4j.LogManager;
@@ -12,7 +11,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.opera.OperaDriver;
+//import org.openqa.selenium.opera.OperaDriver;
 
 import io.cucumber.java.Scenario;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -22,7 +21,7 @@ public class WebDriverFactory {
 	private static final Logger logger = LogManager.getLogger(WebDriverFactory.class);
     private static WebDriver driver=null;
     
-    public static WebDriver getWebDriverForBrowser(String browser) throws Exception {
+    public static WebDriver setWebDriverForBrowser(String browser) throws Exception {
         switch(browser.toLowerCase()){
             case "chrome":
             	System.setProperty("webdriver.chrome.driver","C:\\Users\\nelge\\eclipse-workspace\\chromedriver-win64\\chromedriver.exe");
@@ -43,11 +42,11 @@ public class WebDriverFactory {
 //            	driver = new OperaDriver();
 //                logger.info("Opera Browser invoked");
 //                break;
-//            case "edge":
-//            	WebDriverManager.edgedriver().setup();
-//            	driver = new EdgeDriver();
-//                logger.info("Opera Browser invoked");
-//                break;
+            case "edge":
+            	WebDriverManager.edgedriver().setup();
+            	driver = new EdgeDriver();
+                logger.info("Opera Browser invoked");
+                break;
             case "headless":
             	System.setProperty("webdriver.chrome.driver","C:\\Users\\Sarang\\eclipse-workspace\\Batch - 21\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
         		logger.info("Setting up for browser path is completed");
@@ -55,7 +54,7 @@ public class WebDriverFactory {
         		options.setBinary("C:\\Users\\Sarang\\eclipse-workspace\\Batch - 21\\chrome-win64\\chrome-win64\\chrome.exe");
         		logger.info("Setting up chrome binary completed");
         		options.addArguments("headless");
-        		options.addArguments("window-size=1200x600");
+        		//options.addArguments("window-size=1200x600");
                 driver = new ChromeDriver(options);
                 logger.info("Headless Chrome Browser invoked");
                 break;

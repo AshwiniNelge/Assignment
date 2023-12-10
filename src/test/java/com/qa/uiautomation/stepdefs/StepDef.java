@@ -35,7 +35,8 @@ public class StepDef {
 	public void setUp(Scenario scn) throws Exception {
 		this.scn = scn;
 		String browserName = WebDriverFactory.getBrowserName();
-		driver = WebDriverFactory.getWebDriverForBrowser(browserName);
+		driver = WebDriverFactory.setWebDriverForBrowser(browserName);
+		//driver = WebDriverFactory.setUpBrowser(browserName);
 		landingPageObject = new LandingPageObjects(driver);
 		productPageObject = new ProductPageObjects(driver);
 		cmnPageObject = new CmnPageObjects(driver);
@@ -57,8 +58,10 @@ public class StepDef {
 	@Given("user navigate to the home application url {string}")
 	public void user_navigate_to_the_home_application_url(String url) {
 		WebDriverFactory.navigateToTheUrl(url);
+		
 		logger.info("user navigate to the home application url");
 	}
+
 
 	@Then("User Verify that home page is visible successfully")
 	public void user_verify_that_home_page_is_visible_successfully() {
@@ -72,12 +75,12 @@ public class StepDef {
 		logger.info("application log is displayed as automation excise");
 	}
     
-	@Given("homepage headersection is visible")
+	@When("homepage headersection is visible")
 	public void homepage_headersection_is_visible() {
 		landingPageObject.validateHomePageBtns();
 	}
 
-	@When("on homepage list of buttons are displayed")
+	@Then("on homepage list of buttons are displayed")
 	public void on_homepage_list_of_buttons_are_displayed(List<String> buttonsNameList) {
 
 		landingPageObject.validateHomepageButtonList(buttonsNameList);

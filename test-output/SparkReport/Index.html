@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Grasshopper Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Dec 3, 2023 11:10:36 AM</span></a>
+<a href="#"><span class="badge badge-primary">Dec 10, 2023 08:27:30 AM</span></a>
 </li>
 </ul>
 </div>
@@ -66,13 +66,13 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Dec 3, 2023 11:10:36 AM</h3>
+<h3>Dec 10, 2023 08:27:30 AM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Dec 3, 2023 11:10:47 AM</h3>
+<h3>Dec 10, 2023 08:27:50 AM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -143,7 +143,7 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>6</b> steps passed</small></div>
+<div><small data-tooltip='100%'><b>7</b> steps passed</small></div>
 <div>
 <small data-tooltip='0%'><b>0</b> steps failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
@@ -162,7 +162,7 @@
 </div></div>
 <script>
 var timeline = {
-"E-commerce Application Website Health Checkup":9.441
+"E-commerce Application Website Health Checkup":17.638
 };
 </script>
 <div class="row">
@@ -171,14 +171,6 @@ var timeline = {
 <div class="card-header"><p>Tags</p></div>
 <div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
 <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
-<tr>
-<td>@ui</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>100%</td>
-</tr>
 <tr>
 <td>@ValidatingHomepage</td>
 <td>1</td>
@@ -189,6 +181,14 @@ var timeline = {
 </tr>
 <tr>
 <td>@AutomationExerciseHealthCheck</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@ui</td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
@@ -241,7 +241,7 @@ warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 6,
+passGrandChild: 7,
 failGrandChild: 0,
 warningGrandChild: 0,
 skipGrandChild: 0,
@@ -266,7 +266,7 @@ eventsCount: 5,
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">@ui</a><a class="dropdown-item" href="#">@ValidatingHomepage</a><a class="dropdown-item" href="#">@AutomationExerciseHealthCheck</a>
+<a class="dropdown-item" href="#">@ValidatingHomepage</a><a class="dropdown-item" href="#">@AutomationExerciseHealthCheck</a><a class="dropdown-item" href="#">@ui</a>
 </ul>
 </li>
 </ul>
@@ -279,7 +279,7 @@ eventsCount: 5,
           <div class="test-detail">
             <p class="name">E-commerce Application Website Health Checkup</p>
             <p class="text-sm">
-              <span>11:10:37 AM</span> / <span>00:00:09:441</span>
+              <span>08:27:32 AM</span> / <span>00:00:17:638</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -288,9 +288,9 @@ eventsCount: 5,
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">E-commerce Application Website Health Checkup</h5>
-<span class='badge badge-success'>12.03.2023 11:10:37</span>
-<span class='badge badge-danger'>12.03.2023 11:10:47</span>
-<span class='badge badge-default'>00:00:09:441</span>
+<span class='badge badge-success'>12.10.2023 08:27:32</span>
+<span class='badge badge-danger'>12.10.2023 08:27:50</span>
+<span class='badge badge-default'>00:00:17:638</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 </div>
 <div class="m-t-10 m-l-5"></div>
@@ -320,13 +320,18 @@ eventsCount: 5,
       <div>
       </div>
               </div>
+              <div class="step pass-bg" title="com.qa.uiautomation.stepdefs.StepDef.user_navigate_to_the_home_application_url(java.lang.String)">
+                <span>Given user navigate to the home application url "http://automationexercise.com"</span>
+      <div>
+      </div>
+              </div>
               <div class="step pass-bg" title="com.qa.uiautomation.stepdefs.StepDef.homepage_headersection_is_visible()">
-                <span>Given homepage headersection is visible</span>
+                <span>When homepage headersection is visible</span>
       <div>
       </div>
               </div>
               <div class="step pass-bg" title="com.qa.uiautomation.stepdefs.StepDef.on_homepage_list_of_buttons_are_displayed(java.util.List<java.lang.String>)">
-                <span>When on homepage list of buttons are displayed</span>
+                <span>Then on homepage list of buttons are displayed</span>
       <div><table class='markup-table table '><tr><td>Home</td></tr><tr><td>Products</td></tr><tr><td>Cart</td></tr><tr><td>Signup / Login</td></tr><tr><td>Test Cases</td></tr><tr><td>API Testing</td></tr><tr><td>Video Tutorials</td></tr><tr><td>Contact us</td></tr></table>
       </div>
       <div>
@@ -367,42 +372,6 @@ eventsCount: 5,
 <span class="meta">
 <span class='badge log pass-bg'>1</span>
 </span>
-<p class="name">@ui</p>
-<p class="duration text-sm">1 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>@ui</h4>
-<span status="pass" class='badge log pass-bg'>1 passed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>11:10:37 AM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='2'>Homepage validation</a>
-<div class="">
-<span class="badge badge-default">E-commerce Application Website Health Checkup.Homepage validation</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log pass-bg'>1</span>
-</span>
 <p class="name">@ValidatingHomepage</p>
 <p class="duration text-sm">1 tests</p>
 </div>
@@ -422,7 +391,7 @@ eventsCount: 5,
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>11:10:37 AM</td>
+<td>08:27:32 AM</td>
 <td>
 <a href="#" class="linked" test-id='1' id='2'>Homepage validation</a>
 <div class="">
@@ -458,7 +427,43 @@ eventsCount: 5,
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>11:10:37 AM</td>
+<td>08:27:32 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Homepage validation</a>
+<div class="">
+<span class="badge badge-default">E-commerce Application Website Health Checkup.Homepage validation</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@ui</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@ui</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>08:27:32 AM</td>
 <td>
 <a href="#" class="linked" test-id='1' id='2'>Homepage validation</a>
 <div class="">
